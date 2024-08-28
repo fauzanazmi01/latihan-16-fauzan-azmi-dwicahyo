@@ -13,3 +13,7 @@ Route::get('/dashboard', function () {
 Route::get('/home', function () {
     return redirect()->to(route('dashboard'));
 })->middleware(['auth'])->name('home');
+
+Route::get('/user/two-factor-authentication', function () {
+    return view('auth.two-factor');
+})->middleware(['auth']);
